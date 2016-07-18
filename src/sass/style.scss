@@ -1,0 +1,56 @@
+/*
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ style.css
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 1.2em/1.4 sans-serif;
+}
+
+h1, p {
+	margin-bottom: .8em;
+}
+
+.container {
+	margin: 2em auto;
+	max-width: 40em;
+	width: 90vw;
+}
+
+
+/*
+ 
+ Page loading styles
+ - - - - - -
+
+*/
+
+.is-page-loading {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.is-page-loaded {}
+
+/* Animate page elements in / out - update this to a single class */
+.page-loader {
+	opacity: 1;
+	margin-top: 0;
+	transition: all .4s cubic-bezier(.10, .10, .25, 1);
+
+	.is-page-loading & {
+		opacity: 0;
+		
+		/* Animating margin instead of transform as generally an issue with fixed headers */
+		margin-top: 1.4em;
+	}
+}
