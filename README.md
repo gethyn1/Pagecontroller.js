@@ -1,4 +1,4 @@
-#Load page content via ajax and update history api
+# Load page content via ajax and update history api
 
 This is a simple ES6 script for loading pages via ajax and updating browser location via the browser history api.
 
